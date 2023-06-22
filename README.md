@@ -13,7 +13,7 @@ Moreover, nanoshell includes a simple, yet intuitive add-on maker, where just **
 - **Windows 10**, or later
 - **Linux** support is planned for the near future
 - **MacOS** support is not planned, however, this might change in the future.
-### What it is exactly?
+### What is it exactly?
 Nanoshell was **made for daily use** - pin it on your taskbar, and launch with one click. Its main purpose is to make repeatable tasks way **easier to make**. You may ask, why not just use batch files, or self-running scripts? The reason is - we want to let **anyone** use Nanoshell, and we want to keep making **customizable** scripts very easy to set up.
 ### Found a bug? Got an idea?
 Make an issue here, on GitHub.
