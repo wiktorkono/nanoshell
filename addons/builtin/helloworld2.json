@@ -1,8 +1,0 @@
-{
-    "name": "Hello World2",
-    "triggerCmd": "hellow2",
-    "initFoo": "helloworld2",
-    "imports": [
-        ["addons.builtin.helloworld2", "helloworld2"]
-    ]
-}
