@@ -1,5 +1,8 @@
 {
     "name": "Example Foo",
     "triggerCmd": "printa",
-    "initFoo": "a"
+    "initFoo": "a",
+    "imports": [
+        ["addons.exampleAddon.a", "a"]
+    ]
 }

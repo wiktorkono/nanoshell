@@ -18,6 +18,3 @@ while running:
     prompt = input(f"{green}nanoshell{dim}{white} > {r}")
 
     # DO NOT WRITE ANYTHING BELOW!
-    if prompt.startswith('hellow'): helloworld(prompt)
-    elif prompt.startswith('hellow2'): helloworld2(prompt)
-    elif prompt.startswith('printa'): a(prompt)
