@@ -14,14 +14,14 @@ for addon in addons:
         if obj.endswith(".json"):
             addonData = json.load(open(os.path.abspath(os.path.join("addons", addon, obj))))
             addonList.append([addonData["name"], addonData["triggerCmd"], addonData["initFoo"]])
-print("Successfully loaded mods", 100)
+print("Successfully loaded addons", 100)
 
 with open("nanoshell.py", "a") as f:
     i = 0
     for addon in addonList:
-        if i != 0: el = "el"
+        if i != 0: el = "el" # so it can be elif instead of if
         else: el = ""
         triggerCmd = addon[1]
         initFoo = addon[2]
-        f.write(f"\n    {el}if prompt == '{triggerCmd}' or prompt.startswith('{triggerCmd}') == 'a': {initFoo}(prompt)")
+        f.write(f"\n    {el}if prompt.startswith('{triggerCmd}'): {initFoo}(prompt)")
         i += 1
