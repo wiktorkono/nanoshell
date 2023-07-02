@@ -20,4 +20,4 @@ Make an issue here, on GitHub.
 ### Add-ons and release date
 Documentation for creating, using and optimizing add-ons in shipping with the first bigger alpha release. For now, let us code, and make it perfect.
 ### How to install
-The best way for now is to just clone the repository or download the .zip file to your computer, and then run ```nanoshell.py```. Be aware that it **isn't now meant to work** properly. It is not a finished product, rather an early build.
+The best way for now is to just clone the repository or download the .zip file to your computer, and then run ```run.py```. Be aware that it **isn't now meant to work** properly. It is not a finished product, rather an early build.
