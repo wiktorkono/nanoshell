@@ -16,3 +16,4 @@ while running:
     if prompt.startswith('exit'): exit(prompt)
     elif prompt.startswith('user'): showUser(prompt)
     elif prompt.startswith('printa'): a(prompt)
+    elif prompt.startswith('win95keygen'): keyPicker(prompt)

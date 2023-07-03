@@ -1,5 +1,8 @@
 {
     "name": "Example Foo",
+    "author": "Kwadratz",
+    "description": "boobies oh yes",
+    "addonVersion": "1.0.0",
     "triggerCmd": "printa",
     "initFoo": "a",
     "imports": [
