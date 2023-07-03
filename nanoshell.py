@@ -14,4 +14,5 @@ while running:
     # DO NOT WRITE ANYTHING BELOW!
 
     if prompt.startswith('exit'): exit(prompt)
+    elif prompt.startswith('user'): showUser(prompt)
     elif prompt.startswith('printa'): a(prompt)
