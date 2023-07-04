@@ -4,17 +4,19 @@ addonList = [] #[0 name, 1 triggerCmd, 2 initFoo, 3 imports]
 
 addons = os.listdir("addons")
 howManyAddons = 0
-print(f"Now listing addons: {addons}")
-print("Loading addons...")
+howManyScripts = 0
+# print(f"Now listing addons: {addons}")
+print("Searching for addons...")
 for addon in addons:
     howManyAddons += 1
     addonScripts = os.listdir(os.path.join("addons", addon))
-    print(f"Now listing addon scripts: {addonScripts}")
+    # print(f"Now listing addon scripts: {addonScripts}")
     for obj in addonScripts:
         if obj.endswith(".json"):
             addonData = json.load(open(os.path.abspath(os.path.join("addons", addon, obj))))
             addonList.append([addonData["name"], addonData["triggerCmd"], addonData["initFoo"], addonData["imports"]])
-print("Successfully loaded addons")
+            howManyScripts += 1
+print(f"Found {howManyAddons} addons ({howManyScripts} scripts total)")
 
 print("Reading the base file...")
 with open(os.path.join("bin", "nanoshell-base.py"), "r") as f: nanoshellBase = f.read() #reading the base file
