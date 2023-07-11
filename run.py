@@ -14,7 +14,8 @@ for addon in addons:
     for obj in addonScripts:
         if obj.endswith(".json"):
             addonData = json.load(open(os.path.abspath(os.path.join("addons", addon, obj))))
-            addonList.append([addonData["name"], addonData["triggerCmd"], addonData["initFoo"], addonData["imports"]])
+            secondaryName = addonData["name"].replace(" ", "").replace("-", "").replace("_", "")
+            addonList.append([addonData["name"], addonData["triggerCmd"], f"{secondaryName}{addonData['initFoo']}", addonData["imports"]])
             howManyScripts += 1
 print(f"Found {howManyAddons} addons ({howManyScripts} scripts total)")
 
@@ -44,7 +45,7 @@ with open("imports.py", "a") as f: # here imports are written to imports.py
     for addon in addonList:
         importLines = addon[3]
         for importLine in importLines:
-            f.write(f"\nfrom {importLine[0]} import {importLine[1]}")
+            f.write(f"\nfrom {importLine[0]} import {importLine[1]} as {addon[2]}")
 
 print("Finished, executing Nanoshell...")
 os.system("python nanoshell.py")
