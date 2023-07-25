@@ -18,7 +18,8 @@ Nanoshell was **made for daily use** - pin it on your taskbar, and launch with o
 ### Found a bug? Got an idea?
 Make an issue here, on GitHub.
 ### Add-ons and release date
-Documentation for creating, using and optimizing add-ons in shipping with the first bigger alpha release. For now, let us code, and make it perfect.
-We created a special repository for all add-ons  created not only by us, but also by you - the Nanoshell community. Check it out [here](https://github.com/Kwadratz/nanoshell-addons). To upload an add-on, simply make a pull request and we'll add it shortly after security verification.
+We have started writing the [official Nanoshell documentation](https://nanoshell.gitbook.io/nanoshell/) - it's not perfect, but it's getting there.
+Nanoshell is still in its early stages, so we don’t have an expected release date yet. For now, let us code, and make it perfect.
+We have also created a special repository for all add-ons created not only by us, but also by you - the Nanoshell community. Check it out [here](https://github.com/Kwadratz/nanoshell-addons). To upload an add-on, simply make a pull request and we'll add it shortly after security verification.
 ### How to install
 The best way for now is to just clone the repository or download the .zip file to your computer, and then run ```run.py```. Be aware that it **isn't now meant to work** properly. It is not a finished product, rather an early build.
