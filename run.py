@@ -35,6 +35,7 @@ with open("nanoshell.py", "a") as f: # here nanoshell.py is being initialized
         initFoo = addon[2]
         f.write(f"\n    {el}if prompt.startswith('{triggerCmd}'): {initFoo}(prompt)")
         i += 1
+    f.write("\n"+r"    else: print(f'{red}Command not found!{r}{dim} Maybe you misspelled something?{r}')")
 
 print("Loading addons (part 2)...")
 with open("imports.py", "w") as f: # here imports.py is being cleared
