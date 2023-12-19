@@ -1,6 +1,15 @@
 import os, json
 
-addonList = [] #[0 name, 1 triggerCmd, 2 initFoo, 3 imports]
+# get system platform
+system_platform = os.name
+if system_platform == "nt":
+    system_platform = "win"
+elif system_platform == "posix":
+    system_platform = "linux"
+else:
+    system_platform = "unknown"
+
+addonList = [] #[0 name, 1 triggerCmd, 2 initFoo, 3 imports, 4 platform]
 
 addons = os.listdir("addons")
 howManyAddons = 0
@@ -15,12 +24,14 @@ for addon in addons:
         if obj.endswith(".json"):
             addonData = json.load(open(os.path.abspath(os.path.join("addons", addon, obj))))
             secondaryName = addonData["name"].replace(" ", "").replace("-", "").replace("_", "")
-            addonList.append([addonData["name"], addonData["triggerCmd"], f"{secondaryName}{addonData['initFoo']}", addonData["imports"]])
+            addonList.append([addonData["name"], addonData["triggerCmd"], f"{secondaryName}{addonData['initFoo']}", addonData["imports"], addonData["platform"]])
             howManyScripts += 1
 print(f"Found {howManyAddons} addons ({howManyScripts} scripts total)")
 
 print("Reading the base file...")
-with open(os.path.join("bin", "nanoshell-base.py"), "r") as f: nanoshellBase = f.read() #reading the base file
+with open(os.path.join("bin", "nanoshell-base.py"), "r") as f:
+    nanoshellBase = f.read().replace("{platform-placeholder}", f'"{system_platform}"') #reading the base file and replacing platform placeholder
+
 
 print("Writing the base file...")
 with open("nanoshell.py", "w") as f: f.write(nanoshellBase) #writing the main file
@@ -29,13 +40,20 @@ print("Loading addons (part 1)...")
 with open("nanoshell.py", "a") as f: # here nanoshell.py is being initialized
     i = 0
     for addon in addonList:
-        if i != 0: el = "el" # so it can be elif instead of if
-        else: el = ""
+        if i != 0:
+            el = "el"  # so it can be elif instead of if
+        else:
+            el = ""
         triggerCmd = addon[1]
         initFoo = addon[2]
-        f.write(f"\n    {el}if prompt.startswith('{triggerCmd}'): {initFoo}(prompt)")
+        platform = addon[4]
+
+        f.write(f"\n    {el}if prompt.startswith('{triggerCmd}'): ")
+        if platform.lower() == 'all' or platform.lower() == system_platform.lower():
+            f.write(f"{initFoo}(prompt)")
+        else:
+            f.write(f"platformWarning()")
         i += 1
-    f.write("\n"+r"    else: print(f'{red}Command not found!{r}{dim} Maybe you misspelled something?{r}')")
 
 print("Loading addons (part 2)...")
 with open("imports.py", "w") as f: # here imports.py is being cleared
