@@ -6,7 +6,7 @@ from bin.coloramasetup import *
 running = True
 versionStr = "0.1.2"
 
-system_platform = "win" #run.py replaces it with the system platform
+system_platform = {platform-placeholder} #run.py replaces it with the system platform
 
 def platformWarning():
     if system_platform == "win":
@@ -22,14 +22,3 @@ while running:
     prompt = input(f"{bright}{a}nanoshell{dim}{white} > {r}")
 
     # DO NOT WRITE ANYTHING BELOW!
-
-    if prompt.startswith('addons'): AddonManagementmainAddonMng(prompt)
-    elif prompt.startswith('clear'): ClearScreenclear(prompt)
-    elif prompt.startswith('datetime'): DateTimeshowDateTime(prompt)
-    elif prompt.startswith('exit'): Exitexit(prompt)
-    elif prompt.startswith('help'): Helpmain(prompt)
-    elif prompt.startswith('reload'): AddonReloadmain(prompt)
-    elif prompt.startswith('user'): CurrentUsershowUser(prompt)
-    elif prompt.startswith('gethash'): GetHashobtain_hash(prompt)
-    elif prompt.startswith('photoview'): PhotoViewerphotoview(prompt)
-    elif prompt.startswith('win95keygen'): Windows95KeygenkeyPicker(prompt)
