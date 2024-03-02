@@ -54,6 +54,7 @@ with open("nanoshell.py", "a") as f: # here nanoshell.py is being initialized
         else:
             f.write(f"platformWarning()")
         i += 1
+    f.write("\n    else: print(f'{bright}{red}Error:{r} Command not found. Type {a}{bright}help{r} for the list of all commands')")
 
 print("Loading addons (part 2)...")
 with open("imports.py", "w") as f: # here imports.py is being cleared
@@ -67,4 +68,4 @@ with open("imports.py", "a") as f: # here imports are written to imports.py
             f.write(f"\nfrom {importLine[0]} import {importLine[1]} as {addon[2]}")
 
 print("Finished, executing Nanoshell...")
-os.system("python3 nanoshell.py")
+os.system("python nanoshell.py")

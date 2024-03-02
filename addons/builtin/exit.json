@@ -1,6 +1,6 @@
 {
     "name": "Exit",
-    "author": "Kwadratz",
+    "author": "Hansquare",
     "description": "Exit nanoshell (use -s to exit instantly)",
     "addonVersion": "1.0.0",
     "triggerCmd": "exit",

@@ -4,6 +4,7 @@ from colorama import Style as s
 
 white = c.WHITE
 dim = s.DIM
+bright = s.BRIGHT
 green = c.GREEN
 light_green = c.LIGHTGREEN_EX
 red = c.RED

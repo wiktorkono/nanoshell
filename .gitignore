@@ -163,3 +163,4 @@ cython_debug/
 
 imports.py
 nanoshell.py
+addons/
