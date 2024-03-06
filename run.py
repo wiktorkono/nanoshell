@@ -67,5 +67,5 @@ with open("imports.py", "a") as f: # here imports are written to imports.py
         for importLine in importLines:
             f.write(f"\nfrom {importLine[0]} import {importLine[1]} as {addon[2]}")
 
-print("Finished, executing Nanoshell...")
+print("Finished, starting Nanoshell...")
 os.system("python nanoshell.py")
