@@ -18,7 +18,7 @@ Nanoshell was **made for daily use** - pin it on your taskbar, and launch with o
 ### Found a bug? Got an idea?
 Make an issue here, on GitHub.
 ### Add-ons and release date
-We have started writing the [official Nanoshell documentation](https://nanoshell.gitbook.io/nanoshell/) - it's not perfect, but it's getting there.
+We have started writing the [official Nanoshell wiki](https://github.com/wiktorkonopka/nanoshell/wiki) - it's not perfect, but it's getting there.
 Nanoshell is still in its early stages, so we don’t have an expected release date yet. For now, let us code, and make it perfect.
 We have also created a special repository for all add-ons created not only by us, but also by you - the Nanoshell community. Check it out [here](https://github.com/Kwadratz/nanoshell-addons). To upload an add-on, simply make a pull request and we'll add it shortly after security verification.
 ### How to install
