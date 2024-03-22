@@ -8,5 +8,5 @@ bright = s.BRIGHT
 green = c.GREEN
 light_green = c.LIGHTGREEN_EX
 red = c.RED
-a = green
+a = c.MAGENTA
 r = s.RESET_ALL
