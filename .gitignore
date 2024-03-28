@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-addons/
+addons/*
 !addons/builtin
 !addons/addonManagement
 # C extensions
