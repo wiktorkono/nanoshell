@@ -4,6 +4,8 @@ __pycache__/
 *$py.class
 
 addons/
+!addons/builtin
+!addons/addonManagement
 # C extensions
 *.so
 
