@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-bin/
 addons/
 # C extensions
 *.so
@@ -163,4 +162,3 @@ cython_debug/
 
 imports.py
 nanoshell.py
-addons/
