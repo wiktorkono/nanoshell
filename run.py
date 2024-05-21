@@ -1,11 +1,13 @@
-import os, json
+import os, json, platform
 
 # get system platform
-system_platform = os.name
-if system_platform == "nt":
+system_platform = platform.system()
+if system_platform == "Windows":
     system_platform = "win"
-elif system_platform == "posix":
+elif system_platform == "Linux":
     system_platform = "linux"
+elif system_platform == "Darwin":
+    system_platform = "darwin"
 else:
     system_platform = "unknown"
 
