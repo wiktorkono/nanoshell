@@ -11,8 +11,8 @@ Moreover, nanoshell includes a simple, yet intuitive add-on maker, where just **
 ### Prerequisites
 - **Python 3.9**, or later (*Newest recommended*)
 - **Windows 10**, or later
-- **Linux** support is planned for the near future
-- **MacOS** support is not planned, however, this might change in the future.
+- **Linux** is supported
+- **macOS** is working, but we're not actively supporting it (feel free to open issues if you find any)
 ### What is it exactly?
 Nanoshell was **made for daily use** - pin it on your taskbar, and launch with one click. Its main purpose is to make repeatable tasks way **easier to make**. You may ask, why not just use batch files, or self-running scripts? The reason is - we want to let **anyone** use Nanoshell, and we want to keep making **customizable** scripts very easy to set up.
 ### Found a bug? Got an idea?
