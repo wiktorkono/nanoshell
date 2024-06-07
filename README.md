@@ -9,8 +9,8 @@ With Nanoshell's highly customizable and configurable **add-on system**, you can
 Moreover, nanoshell includes a simple, yet intuitive add-on maker, where just **with a basic knowledge** of how the computer works you can save a lot of time.
 ## Other notes
 ### Prerequisites
-- **Python 3.9**, or later (*Newest recommended*)
-- **Windows 10**, or later
+- **Python 3.9**, or later (_Newest recommended_)
+- **Windows 10**, or later (_We recommend using the **Windows Terminal** for the best experience_)
 - **Linux** is supported
 - **macOS** is working, but we're not actively supporting it (feel free to open issues if you find any)
 ### What is it exactly?
