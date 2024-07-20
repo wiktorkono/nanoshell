@@ -1,4 +1,4 @@
-# Nanoshell
+# Nanoshell || [Nanoshell Addons](https://github.com/Kwadratz/nanoshell-addons)
 ## Introducing: Nanoshell.
 ### Quick way to get things done
 A command prompt made for suiting all of your daily needs. Nanoshell is an interactive terminal, where just with **one click**, just with **one command** you can finish your tasks without doing practically anything. Set it up as you wish, download new features made by the community inside the program, save time and resources.
