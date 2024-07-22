@@ -4,7 +4,7 @@ from imports import *
 from bin.coloramasetup import *
 
 running = True
-versionStr = "0.1.2"
+versionStr = "0.1.3"
 
 system_platform = {platform-placeholder} #run.py replaces it with the system platform
 
