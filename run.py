@@ -11,13 +11,19 @@ elif system_platform == "Darwin":
 else:
     system_platform = "unknown"
 
+print("Searching for addons...")
 addonList = [] #[0 name, 1 triggerCmd, 2 initFoo, 3 imports, 4 platform]
 
 addons = os.listdir("addons")
+for addon in addons:
+    addonPath = "./addons/" + addon
+    if os.path.isdir(addonPath) == True:
+        pass
+    else:
+        addons.remove(addon)
+        print(f'"{addon}" ({addonPath}) is not a directory')
 howManyAddons = 0
 howManyScripts = 0
-# print(f"Now listing addons: {addons}")
-print("Searching for addons...")
 for addon in addons:
     howManyAddons += 1
     addonScripts = os.listdir(os.path.join("addons", addon))
@@ -29,6 +35,7 @@ for addon in addons:
             addonList.append([addonData["name"], addonData["triggerCmd"], f"{secondaryName}{addonData['initFoo']}", addonData["imports"], addonData["platform"]])
             howManyScripts += 1
 print(f"Found {howManyAddons} addons ({howManyScripts} scripts total)")
+print(f"Now listing addons: {addons}")
 
 print("Reading the base file...")
 with open(os.path.join("bin", "nanoshell-base.py"), "r") as f:
