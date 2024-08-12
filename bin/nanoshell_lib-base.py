@@ -8,4 +8,3 @@ addonScriptCount = {nanoshell-addonScriptCount-placeholder}
 addonList = {nanoshell-addonList-placeholder}
 
 systemPlatform = {system-platform-placeholder}
-systemScreenResolution = {system-screen-resolution-placeholder}

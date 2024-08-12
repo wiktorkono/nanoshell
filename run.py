@@ -1,11 +1,4 @@
-import os, json, platform, tkinter
-
-#get screen resolution
-tkinterRoot = tkinter.Tk()
-screenWidth = tkinterRoot.winfo_screenwidth()
-screenHeight = tkinterRoot.winfo_screenheight()
-tkinterRoot.destroy()
-screenResolution = (f"{screenWidth}x{screenHeight}")
+import os, json, platform
 
 # get system platform
 system_platform = platform.system()
@@ -52,7 +45,6 @@ with open(os.path.join("bin", "nanoshell_lib-base.py"), "r") as f:
     nanoshellLibraryBase = nanoshellLibraryBase.replace("{nanoshell-addonCount-placeholder}", f'{howManyAddons}')
     nanoshellLibraryBase = nanoshellLibraryBase.replace("{nanoshell-addonScriptCount-placeholder}", f'{howManyScripts}')
     nanoshellLibraryBase = nanoshellLibraryBase.replace("{nanoshell-addonList-placeholder}", f'{addonList}')
-    nanoshellLibraryBase = nanoshellLibraryBase.replace("{system-screen-resolution-placeholder}", f'"{screenResolution}"')
 
 print("Writing variables...")
 with open(os.path.join("bin", "nanoshell_lib.py"), "w") as f: f.write(nanoshellLibraryBase)
