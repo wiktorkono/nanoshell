@@ -114,3 +114,4 @@ def main(prompt):
     print("Finished, starting Nanoshell...")
     if system_platform == "win": os.system("python nanoshell.py")
     else: os.system("python3 nanoshell.py")
+    exit()
